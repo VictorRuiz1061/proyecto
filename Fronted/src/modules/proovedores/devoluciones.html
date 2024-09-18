@@ -265,8 +265,6 @@
                 </div>
             </div>
         </div>
-    
-    
 
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg pt-6">
             
@@ -332,102 +330,112 @@
             </div>
         </div>
                 <!--  tabla -->
-            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                    <tr>
-                        <th scope="col" class="p-4">
-                            <div class="flex items-center">
-                                <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label for="checkbox-all-search" class="sr-only">checkbox</label>
-                            </div>
-                        </th>
-                        <th scope="col" class="px-6 py-3">ID</th>
-                        <th scope="col" class="px-6 py-3">Nombre</th>
-                        <th scope="col" class="px-6 py-3">Area</th>
-                        <th scope="col" class="px-6 py-3">Cantidad</th>
-                        <th scope="col" class="px-6 py-3">Estado</th> 
-                        <th scope="col" class="px-6 py-3">Acción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="w-4 p-4">
-                            <div class="flex items-center">
-                                <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                            </div>
-                        </td>
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple MacBook Pro 17"</th>
-                        <td class="px-6 py-4">Silver</td>
-                        <td class="px-6 py-4">Laptop</td>
-                        <td class="px-6 py-4">$2999</td>
-                        <td class="px-6 py-4">Proveedor 1</td> 
-                        <td class="px-6 py-4">
-                            <!-- Modal agregar editar -->
-                            <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5" >Editar</a>
-                            <!-- Modal agregar eliminar -->
-                            <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5" >Eliminar</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="w-4 p-4">
-                            <div class="flex items-center">
-                                <input id="checkbox-table-search-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
-                            </div>
-                        </td>
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Microsoft Surface Pro</th>
-                        <td class="px-6 py-4">White</td>
-                        <td class="px-6 py-4">Laptop PC</td>
-                        <td class="px-6 py-4">$1999</td>
-                        <td class="px-6 py-4">Proveedor 2</td> 
-                        <td class="px-6 py-4">
-                            <!-- Modal agregar editar -->
-                            <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5" >Editar</a>
-                            <!-- Modal agregar eliminar -->
-                            <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5" >Eliminar</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="w-4 p-4">
-                            <div class="flex items-center">
-                                <input id="checkbox-table-search-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
-                            </div>
-                        </td>
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Magic Mouse 2</th>
-                        <td class="px-6 py-4">Black</td>
-                        <td class="px-6 py-4">Accessories</td>
-                        <td class="px-6 py-4">$99</td>
-                        <td class="px-6 py-4">Proveedor 3</td> 
-                        <td class="px-6 py-4">
-                            <!-- Modal agregar editar -->
-                            <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5" >Editar</a>
-                            <!-- Modal agregar eliminar -->
-                            <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5" >Eliminar</a>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="w-4 p-4">
-                            <div class="flex items-center">
-                                <input id="checkbox-table-4" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label for="checkbox-table-4" class="sr-only">checkbox</label>
-                            </div>
-                        </td>
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Watch</th>
-                        <td class="px-6 py-4">Silver</td>
-                        <td class="px-6 py-4">Accessories</td>
-                        <td class="px-6 py-4">$179</td>
-                        <td class="px-6 py-4">Proveedor 4</td> 
-                        <td class="px-6 py-4">
-                            <!-- Modal agregar editar -->
-                            <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5" >Editar</a>
-                            <!-- Modal agregar eliminar -->
-                            <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5" >Eliminar</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+               <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+            <th scope="col" class="p-4">
+                <div class="flex items-center">
+                    <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                </div>
+            </th>
+            <th scope="col" class="px-6 py-3">ID</th>
+            <th scope="col" class="px-6 py-3">Nombre</th>
+            <th scope="col" class="px-6 py-3">Área</th>
+            <th scope="col" class="px-6 py-3">Cantidad</th>
+            <th scope="col" class="px-6 py-3">Estado</th> 
+            <th scope="col" class="px-6 py-3">Fecha de entrega</th> 
+            <th scope="col" class="px-6 py-3">Fecha de devolución</th> 
+            <th scope="col" class="px-6 py-3">Proveedor</th> 
+            <th scope="col" class="px-6 py-3">Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <td class="w-4 p-4">
+                <div class="flex items-center">
+                    <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                </div>
+            </td>
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">009</th>
+            <td class="px-6 py-4">Mause</td>
+            <td class="px-6 py-4">tic</td>
+            <td class="px-6 py-4">5</td>
+            <td class="px-6 py-4">Bueno</td>
+            <td class="px-6 py-4">2024-01-20</td>
+            <td class="px-6 py-4">2024-09-20</td>
+            <td class="px-6 py-4">Juan</td>
+            <td class="px-6 py-4">
+                <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5">Editar</a>
+                <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5">Eliminar</a>
+            </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <td class="w-4 p-4">
+                <div class="flex items-center">
+                    <input id="checkbox-table-search-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
+                </div>
+            </td>
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">010</th>
+            <td class="px-6 py-4"> asusvivobook</td>
+            <td class="px-6 py-4">Cocina</td>
+            <td class="px-6 py-4">15</td>
+            <td class="px-6 py-4">Bueno</td>
+            <td class="px-6 py-4">2024-07-19</td>
+            <td class="px-6 py-4">2024-09-19</td>
+            <td class="px-6 py-4">victor</td>
+            <td class="px-6 py-4">
+                <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5">Editar</a>
+                <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5">Eliminar</a>
+            </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <td class="w-4 p-4">
+                <div class="flex items-center">
+                    <input id="checkbox-table-search-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                </div>
+            </td>
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">011</th>
+            <td class="px-6 py-4">Macbook pro</td>
+            <td class="px-6 py-4">Pae</td>
+            <td class="px-6 py-4">20</td>
+            <td class="px-6 py-4">Malo</td>
+            <td class="px-6 py-4">2024-08-22</td>
+            <td class="px-6 py-4">2024-11-22</td>
+            <td class="px-6 py-4">Tatiana</td>
+            <td class="px-6 py-4">
+                <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5">Editar</a>
+                <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5">Eliminar</a>
+            </td>
+        </tr>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <td class="w-4 p-4">
+                <div class="flex items-center">
+                    <input id="checkbox-table-search-4" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-4" class="sr-only">checkbox</label>
+                </div>
+            </td>
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">012</th>
+            <td class="px-6 py-4">Apple MacBook Pro 16</td>
+            <td class="px-6 py-4">café</td>
+            <td class="px-6 py-4">3</td>
+            <td class="px-6 py-4">Bueno</td>
+            <td class="px-6 py-4">2024-06-18</td>
+            <td class="px-6 py-4">2024-10-18</td>
+            <td class="px-6 py-4">Andres</td>
+            <td class="px-6 py-4">
+                <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5">Editar</a>
+                <a data-modal-target="default-modal" data-modal-toggle="default-modal" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+                
+                
         </div>
     </div>
     
@@ -453,40 +461,40 @@
                 <form action="#" method="post">
                   <div class="m-5 flex flex-col space-y-4 justify-center  items-center text-white ">
                       <div class="flex flex-col">
-                          <label for="Nombre1" class="mb-1">ID :</label>
-                          <input type="text" id="Nombre1" name="Nombre1" placeholder="Nombre del Producto" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2 ">
+                          <label for="IDProducto" class="mb-1">ID :</label>
+                          <input type="text" id="IDProducto" name="IDProducto" placeholder="ID Producto" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2 ">
                       </div>
               
                       <div class="flex flex-col">
-                          <label for="Nombre2" class="mb-1">Nombre :</label>
-                          <input type="text" id="Nombre2" name="Nombre2" placeholder="Nombre del Producto" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
+                          <label for="NombreProducto" class="mb-1">Nombre :</label>
+                          <input type="text" id="NombreProducto" name="NombreProducto" placeholder="Nombre del Producto" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
                       </div>
               
                       <div class="flex flex-col">
-                          <label for="Nombre3" class="mb-1">Area :</label>
-                          <input type="text" id="Nombre3" name="Nombre3" placeholder="Nombre del Producto" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
+                          <label for="Area" class="mb-1">Área :</label>
+                          <input type="text" id="Area" name="Area" placeholder="ÁREA" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
                       </div>
               
                       <div class="flex flex-col">
-                          <label for="Nombre4" class="mb-1">Cantidad :</label>
-                          <input type="text" id="Nombre4" name="Nombre4" placeholder="Nombre del Producto" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
+                          <label for="Cantidad" class="mb-1">Cantidad :</label>
+                          <input type="number" id="Cantidad" name="Cantidad" placeholder="CANTIDA" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
                       </div>
                       
                       <div class="flex flex-col">
-                          <label for="Nombre4" class="mb-1">Estado :</label>
-                          <input type="text" id="Nombre4" name="Nombre4" placeholder="Nombre del Producto" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
+                          <label for="Estado" class="mb-1">Estado :</label>
+                          <input type="text" id="Estado" name="Estado" placeholder="ESTADO" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
                       </div>
                       <div class="flex flex-col">
-                        <label for="Nombre4" class="mb-1">Fecha de entrega :</label>
-                        <input type="text" id="Nombre4" name="Nombre4" placeholder="Nombre del Producto" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
+                        <label for="FechaEntrega" class="mb-1">Fecha de entrega :</label>
+                        <input type="date" id="FechaEntrega" name="FechaEntrega" placeholder="FECHA DE ENTREGA" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
                     </div>
                     <div class="flex flex-col">
-                        <label for="Nombre4" class="mb-1">Fecha de Devolución :</label>
-                        <input type="text" id="Nombre4" name="Nombre4" placeholder="Nombre del Producto" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
+                        <label for="FechaDevolucion" class="mb-1">Fecha de Devolución :</label>
+                        <input type="date" id="FechaDevolucion" name="FechaDevolucion" placeholder="FECHA DE DEVOLUCIÓN" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
                     </div>
                     <div class="flex flex-col">
-                        <label for="Nombre4" class="mb-1">Nombre del proovedor :</label>
-                        <input type="text" id="Nombre4" name="Nombre4" placeholder="Nombre del Producto" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
+                        <label for="NombreProovedor" class="mb-1">Proovedor :</label>
+                        <input type="text" id="NombreProovedor" name="NombreProovedor" placeholder="NOMBRE DEL PROOVEDOR" class="border-2 border-gray-400 rounded-lg w-60 px-3 py-2">
                     </div>
                   </div>
               </form>
@@ -505,6 +513,8 @@
     <script src="/src/assets/js/pagina.js"></script>
     <!-- --------------------------------tailwind javascrip---------------------------------------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+ <!-- --------------------------------filtro javascrip---------------------------------------------------- -->
+    <script src="/src/assets/js/filtroTabla.js"></script>
 
     
 </body>
