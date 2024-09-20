@@ -50,8 +50,6 @@
         const loginTitle = document.getElementById('loginTitle');
         const userTypeSelect = document.getElementById('userType');
 
-        let isSpanish = true;
-
         const translations = {
             es: {
                 toggleLanguage: 'English',
@@ -61,7 +59,7 @@
                 login: 'Iniciar Sesión',
                 forgotPassword: '¿Olvidaste tu contraseña?',
                 loginTitle: 'Iniciar Sesión',
-                userTypes: ['Administrador', 'Líder', 'Instructor', 'Interno', 'Aprendiz']
+                userTypes: ['Administrador', 'Líder', 'Instructor', 'Pasante', 'Aprendiz']
             },
             en: {
                 toggleLanguage: 'Español',
@@ -77,6 +75,7 @@
 
         function updateLanguage(lang) {
             const t = translations[lang];
+            document.documentElement.lang = lang;
             toggleLanguageButton.textContent = t.toggleLanguage;
             usernameLabel.textContent = t.username;
             passwordLabel.textContent = t.password;
@@ -85,7 +84,6 @@
             forgotPasswordLink.textContent = t.forgotPassword;
             loginTitle.textContent = t.loginTitle;
 
-            // Update user type options
             userTypeSelect.innerHTML = '';
             t.userTypes.forEach((type, index) => {
                 const option = document.createElement('option');
@@ -93,15 +91,18 @@
                 option.textContent = type;
                 userTypeSelect.appendChild(option);
             });
+
+            localStorage.setItem('language', lang);
         }
 
         toggleLanguageButton.addEventListener('click', () => {
-            isSpanish = !isSpanish;
-            updateLanguage(isSpanish ? 'es' : 'en');
+            const newLang = document.documentElement.lang === 'es' ? 'en' : 'es';
+            updateLanguage(newLang);
         });
 
-        // Initialize in Spanish
-        updateLanguage('es');
+        // Initialize language based on localStorage or default to Spanish
+        const savedLanguage = localStorage.getItem('language') || 'es';
+        updateLanguage(savedLanguage);
     </script>
 </body>
 </html>
