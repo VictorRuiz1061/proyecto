@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <script src="https://cdn.tailwindcss.com/3.4.5"></script>
+</head>
+<body class="bg-cover bg-center min-h-screen flex items-center justify-center" style="background-image: url('./public/img/cerrar-vista-almacen.jpg');">
+
+    <button id="toggleLanguage" class="absolute top-6 left-6 px-4 py-2 rounded-md bg-blue-500 text-white font-bold hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">English</button>
+
+    <div class="bg-white bg-opacity-25 p-8 rounded-lg shadow-md w-96 backdrop-blur-sm">
+        <h2 class="text-2xl font-bold mb-6 text-center text-black" id="loginTitle">Iniciar Sesión</h2>
+        
+        <form>
+            <div class="mb-4">
+                <label for="username" class="block text-black text-sm font-bold mb-2" id="usernameLabel">Usuario:</label>
+                <input type="text" id="username" name="username" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white bg-opacity-80 text-black placeholder-gray-500::placeholder" required>
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-black text-sm font-bold mb-2" id="passwordLabel">Contraseña:</label>
+                <input type="password" id="password" name="password" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white bg-opacity-80 text-black placeholder-gray-500::placeholder" required>
+            </div>
+            <div class="mb-6">
+                <label for="userType" class="block text-black text-sm font-bold mb-2" id="userTypeLabel">Tipo de usuario:</label>
+                <select id="userType" name="userType" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300 bg-white bg-opacity-80 text-black">
+                    <option value="admin">Administrador</option>
+                    <option value="leader">Líder</option>
+                    <option value="instructor">Instructor</option>
+                    <option value="intern">Interno</option>
+                    <option value="apprentice">Aprendiz</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300 mb-4" id="loginButton">
+                Iniciar Sesión
+            </button>
+        </form>
+        <div class="text-center">
+            <a href="#" class="text-sm text-blue-600 hover:text-blue-800" id="forgotPasswordLink">¿Olvidaste tu contraseña?</a>
+        </div>
+    </div>
+
+
+    
+
+    <script>
+        const toggleLanguageButton = document.getElementById('toggleLanguage');
+        const usernameLabel = document.getElementById('usernameLabel');
+        const passwordLabel = document.getElementById('passwordLabel');
+        const userTypeLabel = document.getElementById('userTypeLabel');
+        const loginButton = document.getElementById('loginButton');
+        const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+        const loginTitle = document.getElementById('loginTitle');
+        const userTypeSelect = document.getElementById('userType');
+
+        const translations = {
+            es: {
+                toggleLanguage: 'English',
+                username: 'Usuario:',
+                password: 'Contraseña:',
+                userType: 'Tipo de usuario:',
+                login: 'Iniciar Sesión',
+                forgotPassword: '¿Olvidaste tu contraseña?',
+                loginTitle: 'Iniciar Sesión',
+                userTypes: ['Administrador', 'Líder', 'Instructor', 'Pasante', 'Aprendiz']
+            },
+            en: {
+                toggleLanguage: 'Español',
+                username: 'Username:',
+                password: 'Password:',
+                userType: 'User Type:',
+                login: 'Login',
+                forgotPassword: 'Forgot your password?',
+                loginTitle: 'Login',
+                userTypes: ['Administrator', 'Leader', 'Instructor', 'Intern', 'Apprentice']
+            }
+        };
+
+        function updateLanguage(lang) {
+            const t = translations[lang];
+            document.documentElement.lang = lang;
+            toggleLanguageButton.textContent = t.toggleLanguage;
+            usernameLabel.textContent = t.username;
+            passwordLabel.textContent = t.password;
+            userTypeLabel.textContent = t.userType;
+            loginButton.textContent = t.login;
+            forgotPasswordLink.textContent = t.forgotPassword;
+            loginTitle.textContent = t.loginTitle;
+
+            userTypeSelect.innerHTML = '';
+            t.userTypes.forEach((type, index) => {
+                const option = document.createElement('option');
+                option.value = ['admin', 'leader', 'instructor', 'intern', 'apprentice'][index];
+                option.textContent = type;
+                userTypeSelect.appendChild(option);
+            });
+
+            localStorage.setItem('language', lang);
+        }
+
+        toggleLanguageButton.addEventListener('click', () => {
+            const newLang = document.documentElement.lang === 'es' ? 'en' : 'es';
+            updateLanguage(newLang);
+        });
+
+        // Initialize language based on localStorage or default to Spanish
+        const savedLanguage = localStorage.getItem('language') || 'es';
+        updateLanguage(savedLanguage);
+    </script>
+</body>
+</html>
