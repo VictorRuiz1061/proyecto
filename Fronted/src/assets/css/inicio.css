@@ -1,0 +1,5 @@
+.img {
+    max-height: 300px; /* Ajusta la altura máxima deseada */
+    width: 500px; /* Mantiene el ancho al 100% */
+    overflow: hidden; /* Asegura que la imagen no se salga */
+}
