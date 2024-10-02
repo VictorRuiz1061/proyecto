@@ -32,94 +32,13 @@
         </div>
     </div>
     
-    <script>
-        const toggleLanguageButton = document.getElementById('toggleLanguage');
-        const usernameLabel = document.getElementById('usernameLabel');
-        const passwordLabel = document.getElementById('passwordLabel');
-        const userTypeLabel = document.getElementById('userTypeLabel');
-        const loginButton = document.getElementById('loginButton');
-        const forgotPasswordLink = document.getElementById('forgotPasswordLink');
-        const loginTitle = document.getElementById('loginTitle');
-        const userTypeSelect = document.getElementById('userType');
-    
-        const translations = {
-            es: {
-                toggleLanguage: 'English',
-                username: 'Usuario:',
-                password: 'Contraseña:',
-                userType: 'Tipo de usuario:',
-                login: 'Iniciar Sesión',
-                forgotPassword: '¿Olvidaste tu contraseña?',
-                loginTitle: 'Iniciar Sesión',
-                userTypes: ['Administrador', 'Líder', 'Instructor', 'Pasante', 'Aprendiz']
-            },
-            en: {
-                toggleLanguage: 'Español',
-                username: 'Username:',
-                password: 'Password:',
-                userType: 'User Type:',
-                login: 'Login',
-                forgotPassword: 'Forgot your password?',
-                loginTitle: 'Login',
-                userTypes: ['Administrator', 'Leader', 'Instructor', 'Intern', 'Apprentice']
-            }
-        };
-    
-        function updateLanguage(lang) {
-            const t = translations[lang];
-            document.documentElement.lang = lang;
-            toggleLanguageButton.textContent = t.toggleLanguage;
-            usernameLabel.textContent = t.username;
-            passwordLabel.textContent = t.password;
-            userTypeLabel.textContent = t.userType;
-            loginButton.textContent = t.login;
-            forgotPasswordLink.textContent = t.forgotPassword;
-            loginTitle.textContent = t.loginTitle;
-    
-            userTypeSelect.innerHTML = '';
-            t.userTypes.forEach((type, index) => {
-                const option = document.createElement('option');
-                option.value = ['admin', 'leader', 'instructor', 'intern', 'apprentice'][index];
-                option.textContent = type;
-                userTypeSelect.appendChild(option);
-            });
-    
-            localStorage.setItem('language', lang);
-        }
-    
-        toggleLanguageButton.addEventListener('click', () => {
-            const newLang = document.documentElement.lang === 'es' ? 'en' : 'es';
-            updateLanguage(newLang);
-        });
-    
-        // Initialize language based on localStorage or default to Spanish
-        const savedLanguage = localStorage.getItem('language') || 'es';
-        updateLanguage(savedLanguage);
-    </script>
-    
     <!-- Agrega las tres imágenes de fondo -->
     <div class="hidden">
-        <img src="/Fronted/public/img/gran-almacen-luz-brillante-que-entra-puerta.jpg">
+        <img src="/Fronted/public/img/gran-almacen-luz-brillante-que-entra-puerta.jpg" alt="Background 1">
         <img src="/Fronted/public/img/vista-almacen-completo-carretilla-elevadora.jpg" alt="Background 2">
-        <img src="/Fronted/public/img/cerrar-vista-almacen.jpg" alt="Background 2">
-    
+        <img src="/Fronted/public/img/cerrar-vista-almacen.jpg" alt="Background 3">
     </div>
     
-    <script>
-        // Función para cambiar aleatoriamente el fondo cada 10 segundos
-        function changeBackground() {
-            const backgroundImages = [
-                '/Fronted/public/img/gran-almacen-luz-brillante-que-entra-puerta.jpg',
-                '/Fronted/public/img/vista-almacen-completo-carretilla-elevadora.jpg',
-                '/Fronted/public/img/cerrar-vista-almacen.jpg',
-            ];
-            const randomIndex = Math.floor(Math.random() * backgroundImages.length);
-            const body = document.querySelector('body');
-            body.style.backgroundImage = `url(${backgroundImages[randomIndex]})`;
-        }
-    
-        // Cambia el fondo cada 10 segundos
-        setInterval(changeBackground, 3000);
-    </script>
-    </body>
-    </html>
+    <script src="/Fronted/src/assets/js/login.js"></script>
+</body>
+</html>
