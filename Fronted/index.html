@@ -6,7 +6,7 @@
     <title>Iniciar Sesión</title>
     <script src="https://cdn.tailwindcss.com/3.4.5"></script>
 </head>
-<body class="bg-cover bg-center min-h-screen flex items-center justify-center" style="background-image: url('./public/img/cerrar-vista-almacen.jpg');">
+<body class="bg-cover bg-center min-h-screen flex items-center justify-center" style="background-image: url('/Fronted/public/img/gran-almacen-luz-brillante-que-entra-puerta.jpg');">
 
     <button id="toggleLanguage" class="absolute top-6 left-6 px-4 py-2 rounded-md bg-blue-500 text-white font-bold hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">English</button>
 
@@ -32,6 +32,26 @@
         </div>
     </div>
     
+    <!-- Modal de contraseña olvidada -->
+    <div id="forgotPasswordModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white ">
+            <div class="mt-3 text-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900" id="modalTitle">Recuperar Contraseña</h3>
+                <div class="mt-2 px-7 py-3">
+                    <p class="text-sm text-gray-500" id="modalDescription">
+                        Ingresa tu correo electrónico y te enviaremos instrucciones para restablecer tu contraseña.
+                    </p>
+                    <input type="email" id="recoveryEmail" class="mt-4 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300" placeholder="Correo electrónico">
+                </div>
+                <div class="items-center px-4 py-3">
+                    <button id="sendRecoveryEmail" class="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                        Enviar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Agrega las tres imágenes de fondo -->
     <div class="hidden">
         <img src="/Fronted/public/img/gran-almacen-luz-brillante-que-entra-puerta.jpg" alt="Background 1">
@@ -40,5 +60,6 @@
     </div>
     
     <script src="/Fronted/src/assets/js/login.js"></script>
+    
 </body>
 </html>

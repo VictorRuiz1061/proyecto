@@ -63,3 +63,33 @@ function changeBackground() {
 
 // Cambiar el fondo cada 3 segundos
 setInterval(changeBackground, 3000);
+
+
+
+// para recuperar la contraseña
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+            const forgotPasswordModal = document.getElementById('forgotPasswordModal');
+            const sendRecoveryEmail = document.getElementById('sendRecoveryEmail');
+
+            forgotPasswordLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                forgotPasswordModal.classList.remove('hidden');
+            });
+
+            forgotPasswordModal.addEventListener('click', function(e) {
+                if (e.target === forgotPasswordModal) {
+                    forgotPasswordModal.classList.add('hidden');
+                }
+            });
+
+            sendRecoveryEmail.addEventListener('click', function() {
+                const email = document.getElementById('recoveryEmail').value;
+                // Aquí puedes agregar la lógica para enviar el correo de recuperación
+                console.log('Enviando correo de recuperación a:', email);
+                forgotPasswordModal.classList.add('hidden');
+                // Mostrar un mensaje de confirmación al usuario
+                alert('Se ha enviado un correo de recuperación a ' + email);
+            });
+        });
