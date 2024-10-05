@@ -28,7 +28,7 @@
                     </svg>
                 </div>
             </div>
-            
+
             <div class = "hidden md:block text-sm  text-black dark:text-white">Administrador</div>
         </div>
 
@@ -332,7 +332,7 @@
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             Agropecuaria
                         </th>
-                        <td class="px-6 py-4">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             CGDSS
                         </td>
                         <td class="px-6 py-4">
@@ -393,8 +393,8 @@
                         <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" required>
                     </div>
                     <div>
-                        <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ubicacion</label>
-                        <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" required>
+                        <label for="line-clamp" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ubicación</label>
+                        <input type="text" id="line-clamp" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Ubicación" required>
                     </div>
                     <div>
                         <label for="capacity" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Capacidad de elementos</label>
@@ -402,8 +402,8 @@
                     </div>
                     
                     <div>
-                        <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Condiciones</label>
-                        <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required>
+                        <label for="first" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Condiciones</label>
+                        <input type="text" id="first" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required>
                     </div>
                     
                 </div>
@@ -415,18 +415,23 @@
 
 <!-- imagenes -->
 
-<div class="w-2 h-2 flex items-center justify-center">
-    <img src="/Fronted/public/img/imagen1.jpg" alt="" class="object-cover w-full h-full">
+<div class="grid grid-cols-3 gap-4">
+    <div class="flex items-center justify-center">
+        <img src="/Fronted/public/img/imagen1.jpg" alt="" class="object-cover w-full h-40">
+    </div>
+    <div class="flex items-center justify-center">
+        <img src="/Fronted/public/img/imagen2.jpg" alt="" class="object-cover w-full h-40">
+    </div>
+    <div class="flex items-center justify-center">
+        <img src="/Fronted/public/img/imagen3.jpg" alt="" class="object-cover w-full h-40">
+    </div>
+    <div class="flex items-center justify-center">
+        <img src="/Fronted/public/img/imagen4.jpg" alt="" class="object-cover w-full h-40">
+    </div>
 </div>
-<div class="w-1/2 h-1/2 flex items-center justify-center">
-    <img src="/Fronted/public/img/imagen2.jpg" alt="" class="object-cover w-full h-full">
-</div> 
-<div class="w-1/2 h-1/2 flex items-center justify-center">
-    <img src="/Fronted/public/img/imagen3.jpg" alt="" class="object-cover w-full h-full">
-</div>
- <div class="w-1/2 h-1/2 flex items-center justify-center">
-    <img src="/Fronted/public/img/imagen4.jpg" alt="" class="object-cover w-full h-full">
-</div> 
+
+
+
     <!-- alerta -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/fronted/src/assets/js/scrip.js"></script>
