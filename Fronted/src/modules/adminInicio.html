@@ -11,11 +11,9 @@
   <body>
     <!-------------------------------header--------------------------------- -->
     <div class="fixed w-full z-30 flex text-white bg-[#1E293B] p-2 items-center justify-center h-16 px-10">
-      <div class="logo ml-12 dark:text-white ease-in-out duration-500 h-full flex items-center justify-center">Menu</div>
-
       <div class="grow h-full flex items-center justify-center"></div>
       <div class="flex-none h-full text-center flex items-center justify-center">
-        <div class="absolute text-white text-4xl left-1/2 -translate-x-1/2">Inicio</div>
+        <div class="absolute text-white text-4xl left-1/2 -translate-x-1/2" id="titulo">Prestamos</div>
 
         <div>
           <div class="w-8 h-8 flex">
@@ -25,7 +23,7 @@
           </div>
         </div>
 
-        <div class="hidden md:block text-sm text-black dark:text-white">Administrador</div>
+        <div class="hidden md:block text-sm text-black dark:text-white" id="administrador">Administrador</div>
       </div>
 
       <div class="flex pl-4 items-center space-x-2">
@@ -45,7 +43,7 @@
       <div
         class="max-toolbar translate-x-24 scale-x-0 w-full -right-6 transition transform ease-in duration-300 flex items-center justify-between border-4 border-white dark:border-[#0F172A] bg-[#1E293B] absolute top-2 rounded-full h-12">
         <div class="flex items-center space-x-3 group bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 pl-10 pr-2 py-1 rounded-full text-white">
-          <div class="transform ease-in-out duration-300 mr-12">Menu</div>
+          <div class="transform ease-in-out duration-300 mr-12" id="menu">Menu</div>
         </div>
       </div>
 
@@ -67,14 +65,14 @@
           <svg class="h-5 w-5 text-white-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
           </svg>
-          <div>Usuario</div>
+          <div id="Usuario">Usuario</div>
         </div>
 
         <div class="hover:ml-4 w-full text-white bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
           <svg class="h-5 w-5 text-white-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
           </svg>
-          <div>Materiales</div>
+          <div id="Materiales">Materiales</div>
         </div>
 
         <div class="hover:ml-4 w-full text-white bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
@@ -84,7 +82,7 @@
             <line x1="12" y1="10" x2="12" y2="16" />
             <line x1="9" y1="13" x2="15" y2="13" />
           </svg>
-          <div>Registrar materiales</div>
+          <div id="RegistrarMateriales">Registrar materiales</div>
         </div>
 
         <div class="hover:ml-4 w-full text-white bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
@@ -93,7 +91,7 @@
             <path d="M9 4h3l2 2h5a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" />
             <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h2" />
           </svg>
-          <div>Consultar materiales</div>
+          <div id="ConsultarMateriales">Consultar materiales</div>
         </div>
 
         <div class="hover:ml-4 w-full text-white bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
@@ -103,7 +101,7 @@
               stroke-linejoin="round"
               d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z" />
           </svg>
-          <div>Bodegas</div>
+          <div id="Bodegas">Bodegas</div>
         </div>
 
         <div class="hover:ml-4 w-full text-white bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
@@ -113,7 +111,7 @@
               stroke-linejoin="round"
               d="M9 3.75H6.912a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H15M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859M12 3v8.25m0 0-3-3m3 3 3-3" />
           </svg>
-          <div>Registrar bodega</div>
+          <div id="RegistarBodega">Registrar bodega</div>
         </div>
 
         <div class="hover:ml-4 w-full text-white bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
@@ -123,7 +121,7 @@
             <rect x="9" y="3" width="6" height="4" rx="2" />
             <path d="M9 14l2 2l4 -4" />
           </svg>
-          <div><a href="./prestamos.html">Prestamos </a></div>
+          <div id="prestamos"><a href="./prestamos.html" > Prestamos </a></div>
         </div>
 
         <div class="hover:ml-4 w-full text-white bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
@@ -134,7 +132,7 @@
               stroke-width="2"
               d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
           </svg>
-          <div><a href="./devoluciones.html">Devoluciones </a></div>
+          <div id="Devoluciones"><a href="./devoluciones.html"> Devoluciones</a></div>
         </div>
 
         <div class="hover:ml-4 w-full text-white bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
@@ -142,7 +140,7 @@
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
             <polyline points="22 4 12 14.01 9 11.01" />
           </svg>
-          <div>Agregar solicitud</div>
+          <div id="agregarSolicitud">Agregar solicitud</div>
         </div>
 
         <div class="hover:ml-4 w-full text-white bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
@@ -150,7 +148,7 @@
             <polyline points="9 11 12 14 22 4" />
             <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
           </svg>
-          <div>Agregar prestamo</div>
+          <div id="agregarPrestamo">Agregar prestamo</div>
         </div>
 
         <div class="hover:ml-4 w-full text-white bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
@@ -161,7 +159,7 @@
               stroke-width="2"
               d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
           </svg>
-          <div>Elementos disponibles</div>
+          <div id="elementosDisponibles">Elementos disponibles</div>
         </div>
 
         <div class="hover:ml-4 w-full text-white bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
@@ -172,7 +170,10 @@
             <path d="M5 17h-2v-4m-1 -8h11v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
             <line x1="3" y1="9" x2="7" y2="9" />
           </svg>
-          <div>Provedores</div>
+          <div id="provedores">Provedores</div>
+        </div>
+        <div>
+          <button id="boton-idioma" class="bg-blue-700  text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700 m-5 mt-20">lenguaje:</button>
         </div>
       </div>
 
@@ -283,21 +284,21 @@
 
     <!-------------------------------------------- contenido -------------------------------------------->
 
-    <div class="content ml-12 transform ease-in-out duration-500 pt-20 px-2 md:px-5 pb-30 flex justify-center items-center">
+    <div class = "content ml-12 transform ease-in-out duration-500 pt-20 px-2 md:px-5 pb-4 ">
       <!-- Primera tarjeta -->
       <div class="min-h-screen flex flex-col w-full h-full shadow-lg border-collapse border-black">
         <header-01 class="bg-sky-950 text-white py-8 w-full text-center">
           <div class="flex flex-row items-center justify-between m-10">
             <div class="flex justify-start items-center space-x-2">
-              <button class="bg-blue-700 hover:bg-blue-600 text-white font-medium rounded-lg px-6 py-3 transition duration-300 text-lg">Ver Reportes</button>
-              <button class="bg-blue-700 hover:bg-blue-600 text-white font-medium rounded-lg px-6 py-3 transition duration-300 text-lg">Configuración</button>
-              <button class="bg-blue-700 hover:bg-blue-600 text-white font-medium rounded-lg px-6 py-3 transition duration-300 text-lg">Ayuda</button>
+              <button class="bg-blue-700 hover:bg-blue-600 text-white font-medium rounded-lg px-6 py-3 transition duration-300 text-lg" id="verReportes">Ver Reportes</button>
+              <button class="bg-blue-700 hover:bg-blue-600 text-white font-medium rounded-lg px-6 py-3 transition duration-300 text-lg" id="Configuración">Configuración</button>
+              <button class="bg-blue-700 hover:bg-blue-600 text-white font-medium rounded-lg px-6 py-3 transition duration-300 text-lg" id="ayuda">Ayuda</button>
             </div>
             <div class="flex items-center bg-sky-950 rounded-lg">
               <div class="rounded-3xl shadow-lg hover:bg-gray-100 transition duration-300 px-10 mx-5">
                 <img src="../../public/img/carrito.png" alt="Carrito" class="w-9 h-9" />
               </div>
-              <input type="text" placeholder="Buscar..." class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-center bg-black text-white" />
+              <input type="text" placeholder="Buscar..." class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-center bg-black text-white" id="buscar" />
             </div>
           </div>
         </header-01>
@@ -308,7 +309,7 @@
               <img src="../../public/img/img-inicio-01.jpg" alt="" class="object-cover w-full h-48  rounded-t-lg " />
             </div>
             <div class="p-5 bg-sky-950 text-center">
-              <button class="bg-blue-700 mt-2 text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700">Bodegas</button>
+              <button class="bg-blue-700 mt-2 text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700" id="bodegas">Bodegas</button>
             </div>
           </div>
           <div class="max-w-xs bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 mx-5">
@@ -316,7 +317,7 @@
               <img src="../../public/img/imgInicio02.jpg" alt="" class="object-cover w-full h-48 rounded-t-lg" />
             </div>
             <div class="p-5 bg-sky-950 text-center">
-              <button class="bg-blue-700 mt-2 text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700">Materiales</button>
+              <button class="bg-blue-700 mt-2 text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700" id="materiales">Materiales</button>
             </div>
           </div>
 
@@ -325,7 +326,7 @@
               <img src="../../public/img/imgInicio03.jpg" alt="" class="object-cover w-full h-48 rounded-t-lg" />
             </div>
             <div class="p-5 bg-sky-950 text-center">
-              <button class="bg-blue-700 mt-2 text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700">Elementos disponibles</button>
+              <button class="bg-blue-700 mt-2 text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700" id="ElementosDisponibles">Elementos disponibles</button>
             </div>
           </div>
 
@@ -334,7 +335,7 @@
               <img src="../../public/img/imgInicio04.jpg" alt="" class="object-cover w-full h-48 rounded-t-lg" />
             </div>
             <div class="p-5 bg-sky-950 text-center">
-              <button class="bg-blue-700 mt-2 text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700">Usuarios</button>
+              <button class="bg-blue-700 mt-2 text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700" id="usuarios">Usuarios</button>
             </div>
           </div>
 
@@ -343,7 +344,7 @@
               <img src="../../public/img/imgInicio05.png" alt="" class="object-cover w-full h-48 rounded-t-lg" />
             </div>
             <div class="p-5 bg-sky-950 text-center">
-              <button class="bg-blue-700 mt-2 text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700">registro de elementos</button>
+              <button class="bg-blue-700 mt-2 text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700" id="registro_Elementos">registro de elementos</button>
             </div>
           </div>
 
@@ -352,7 +353,7 @@
               <img src="../../public/img/imgInicio06.jpg" alt="" class="object-cover w-full h-48 rounded-t-lg" />
             </div>
             <div class="p-5 bg-sky-950 text-center">
-              <button class="bg-blue-700 mt-2 text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700"><a href="./proovedores/prestamos.html">Prestamos</a></button>
+              <button class="bg-blue-700 mt-2 text-white font-semibold py-1 px-5 rounded-lg shadow-md transition duration-300 hover:bg-blue-700"><a href="./proovedores/prestamos.html" id="Prestamos">Prestamos</a></button>
             </div>
           </div>
         </div>
@@ -360,5 +361,7 @@
     </div>
     <!-- --------------------------------pagina javascrip---------------------------------------------------- -->
     <script src="../../src/assets/js/pagina.js"></script>
+    <!-- traduccion js -->
+     <script src="../../src/assets/js/idioma.js"></script>
   </body>
 </html>
