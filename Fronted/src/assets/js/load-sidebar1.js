@@ -1,7 +1,7 @@
 //load-sidebar.js
 document.addEventListener("DOMContentLoaded", function () {
   // Cargar el Sidebar
-  fetch("../components/sidebar.html")
+  fetch("../../components/sidebar.html")
     .then((response) => {
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       return response.text();
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Cargar el script del sidebar
         const script = document.createElement("script");
-        script.src = "../components/sidebar.js"; // Asegúrate de que la ruta sea correcta
+        script.src = "../../components/sidebar.js"; // Ruta corregida
         document.head.appendChild(script);
       } else {
         console.error("No se encontró el elemento <aside> en sidebar.html");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => console.error("Error al cargar el sidebar:", error));
 
   // Cargar el Header
-  fetch("../components/header.html")
+  fetch("../../components/header.html")
     .then((response) => {
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       return response.text();
@@ -43,4 +43,3 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("Error al cargar el header:", error));
 });
-
