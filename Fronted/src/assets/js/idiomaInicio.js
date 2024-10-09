@@ -1,7 +1,6 @@
 //barra de navegación
 const botonIdioma = document.getElementById('boton-idioma');
-const titulo_inicio = document.getElementById('titulo');
-const titulo_devoluciones = document.getElementById('titulo_devoluciones');
+const titulo_inicio = document.getElementById('titulo_Inicio');
 const administrador = document.getElementById('administrador');
 const usuario = document.getElementById('Usuario');
 const menu = document.getElementById('menu');
@@ -35,7 +34,6 @@ const idiomas = {
   // barra de navegación
   español: {
     titulo_inicio :'Inicio',
-    titulo_devoluciones :'Devoluciones',
     prestamos: 'Préstamos',
     administrador: 'Administrador',
     usuario: 'Usuario',
@@ -66,7 +64,6 @@ const idiomas = {
   inglés: {
     // barra de navegación
     titulo_inicio :'start',
-    titulo_devoluciones :'returns',
     prestamos: 'Loans',
     administrador: 'Administrator',
     usuario: 'User',
@@ -128,7 +125,6 @@ botonIdioma.addEventListener('click', () => {
     usuarios.textContent = idiomas[idiomaActual].usuarios;
     registro_Elementos.textContent = idiomas[idiomaActual].registro_Elementos;
     Prestamos.textContent = idiomas[idiomaActual].Prestamos;
-    titulo_devoluciones.textContent = idiomas[idiomaActual]. titulo_devoluciones;
 
     
 });

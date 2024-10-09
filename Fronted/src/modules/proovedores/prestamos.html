@@ -14,7 +14,7 @@
     <div class="fixed w-full z-30 flex text-white bg-[#1E293B] p-2 items-center justify-center h-16 px-10">
       <div class="grow h-full flex items-center justify-center"></div>
       <div class="flex-none h-full text-center flex items-center justify-center">
-        <div class="absolute text-white text-4xl left-1/2 -translate-x-1/2" id="titulo">Inicio</div>
+        <div class="absolute text-white text-4xl left-1/2 -translate-x-1/2" id="titulo_prestamos">Prestamos</div>
 
         <div>
           <div class="w-8 h-8 flex">
@@ -288,30 +288,31 @@
     <div class="content ml-12 transform ease-in-out duration-500 pt-20 px-2 md:px-5 pb-4">
       <div class="flex justify-start mx-8 pb-4 gap-10">
         <div class="ms-10">
-          <button
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            type="button">
-            <a href="#" class="text-white">Consultar Materiales</a>
-          </button>
+            <button id="consultar-materiales-btn"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                type="button">
+                <a href="#" class="text-white">Consultar Materiales</a>
+            </button>
         </div>
         <div class="mx-10">
-          <button
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            type="button">
-            <a href="#" class="text-white">Elementos disponibles</a>
-          </button>
+            <button id="elementos-disponibles-btn"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                type="button">
+                <a href="#" class="text-white">Elementos disponibles</a>
+            </button>
         </div>
         <!-- Modal agregar prestamo -->
         <div class="mx-9">
-          <button
-            data-modal-target="default-modal"
-            data-modal-toggle="default-modal"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            type="button">
-            + Agregar Prestamo
-          </button>
+            <button id="agregar-prestamo-btn"
+                data-modal-target="default-modal"
+                data-modal-toggle="default-modal"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                type="button">
+                + Agregar Prestamo
+            </button>
         </div>
-      </div>
+    </div>
+    
 
       <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <div class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4">
@@ -400,7 +401,7 @@
 
           <!-- Barra de busqueda -->
           <div>
-            <label for="table-search" class="sr-only">Buscar</label>
+            <label for="table-search" class="sr-only" id="buscar">Buscar</label>
             <div class="relative">
               <div class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none">
                 <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -428,13 +429,13 @@
                   <label for="checkbox-all-search" class="sr-only">checkbox</label>
                 </div>
               </th>
-              <th scope="col" class="px-6 py-3">ID</th>
-              <th scope="col" class="px-6 py-3">Nombre</th>
-              <th scope="col" class="px-6 py-3">Área</th>
-              <th scope="col" class="px-6 py-3">Estado</th>
-              <th scope="col" class="px-6 py-3">Proveedor</th>
-              <th scope="col" class="px-6 py-3">Fecha</th>
-              <th scope="col" class="px-6 py-3">Acción</th>
+              <th scope="col" class="px-6 py-3" id="id_prestamos">ID</th>
+              <th scope="col" class="px-6 py-3" id="nombrePrestamos">Nombre</th>
+              <th scope="col" class="px-6 py-3" id="areaPrestamos">Área</th>
+              <th scope="col" class="px-6 py-3" id="estadoPrestamos">Estado</th>
+              <th scope="col" class="px-6 py-3" id="ProovedorPrestamos">Proveedor</th>
+              <th scope="col" class="px-6 py-3" id="fechaPrestamos">Fecha</th>
+              <th scope="col" class="px-6 py-3" id="acciones">Acción</th>
             </tr>
           </thead>
           <tbody>
@@ -612,5 +613,7 @@
     <script src="../../assets/js/alertas.js"></script>
     <!-- --------------------------------filtro javascrip---------------------------------------------------- -->
     <script src="../../assets/js/filtroTabla.js"></script>
+   <!--  javascript idioma -->
+     <script src="../../../../Fronted/src/assets/js/idiomaPrestamos.js"></script>
   </body>
 </html>
