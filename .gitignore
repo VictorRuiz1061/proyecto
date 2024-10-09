@@ -1,0 +1,5 @@
+#no permite cargar .idea
+.idea/
+
+#ingnorar variables globales
+.env
