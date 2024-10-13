@@ -22,6 +22,7 @@ function setDark(val) {
 
 function openNav() {
   if (sidebar.classList.contains("-translate-x-48")) {
+    // max sidebar
     sidebar.classList.remove("-translate-x-48");
     sidebar.classList.add("translate-x-none");
     maxSidebar.classList.remove("hidden");
@@ -34,6 +35,7 @@ function openNav() {
     content.classList.remove("ml-12");
     content.classList.add("ml-12", "md:ml-60");
   } else {
+    // mini sidebar
     sidebar.classList.add("-translate-x-48");
     sidebar.classList.remove("translate-x-none");
     maxSidebar.classList.add("hidden");
@@ -46,9 +48,4 @@ function openNav() {
     content.classList.remove("ml-12", "md:ml-60");
     content.classList.add("ml-12");
   }
-}
-
-function toggleMenu(id) {
-  const submenu = document.getElementById(id);
-  submenu.classList.toggle("hidden");
 }
