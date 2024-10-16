@@ -1,4 +1,4 @@
-/* Swal.fire({
+Swal.fire({
     title: "Bodega registrada!",
     icon: "success"
-  }); */
+  });
